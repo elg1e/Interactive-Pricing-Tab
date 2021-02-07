@@ -9,43 +9,56 @@
         <link rel="stylesheet" href="style.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+        
+        <title>Interactive pricing component</title>
     </head>
     <body>
-        
-        <!--Background Image-->
-        <div class="main-container">
-
-            <!--Image and Heading-->
-            <div class="second-container">
-
-                <header class="heading-content">
-                    <h1 class="main-heading">Simple, traffic-based pricing</h1>
-                    <p class="heading-paragraph">Sign-up for our 30-day trial.<br>No credit required</p>
-                </header>
-
+        <!--Main/Image-->
+        <main class="main">
+            <!--Main Heading-->
+            <div class="heading-container">
+                <h2 class="heading">Simple, traffic-based pricing</h2>
+                <p class="heading-para">Sign-up for our 30-day trial. No credit card required.</p>
             </div>
-
-            <!--Tab Area-->
+            <!--Price Calculator Tab-->
             <div class="tab-container">
-
-                <main class="main-content">
-                    <div class="top-section">
-                        <p class="top-section-text">100k pageviews</p>
-                        <!--Slider-->
-                        <h1 class="pay-per-my">$16.00/month</h1>
-                        <span class="month-year">Monthly Billing<!--slider-->Yearly Billing</span>
+                <div class="range-container">
+                    <div class="page-views">
+                        <p>100k pageviews</p>
                     </div>
-                    <div class="bottom-section">
-                        <span><img src="" alt="">Unlimited websites</span>
-                        <span><img src="" alt="">100% data ownership</span>
-                        <span><img src="" alt="">Email reports</span>
+                    <div class="price">
+                        <h2>$16.00<span class="month">/month</span></h2>
+                    </div>
+                    <div class="range-slider">
+                        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+                    </div>
+
+                    <div class="billing">
+                        <p>Monthly Billing</p>
+                        <label class="switch">
+                        <input type="checkbox">
+                        <span class="toggle"></span>
+                        </label>
+                        <p>Yearly Billing</p>
+                        <p>25% discount</p>
+                    </div>
+                </div>
+                <!--Bottom Section-->
+                <div class="start-trial">
+                    <div class="list-container">
+                        <ul>
+                            <li>Unlimited Websites</li>
+                            <li>100% data ownership</li>
+                            <li>Email reports</li>
+                        </ul>
+                    </div>
+                    <div class="btn-box">
                         <button class="trial-btn">Start my trial</button>
                     </div>
-                </main>
-
+                </div>
             </div>
+        </main>
 
-        </div>
         <script src="script.js" async defer></script>
     </body>
 </html>
