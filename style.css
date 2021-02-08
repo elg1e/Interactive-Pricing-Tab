@@ -63,59 +63,41 @@ body {
 /* Price Calculator Tab */
 
 .tab-container {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     background-color: rgba(255, 255, 255, 0.829);
     border-radius: 10px;
     box-shadow: 0 10px 15px 0.1px rgba(0, 0, 0, 0.2);
     width: 500px;
 }
 
-.range-container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    flex: 1 1 auto;
-
-    margin: 20px;
+.tab-container {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas:
+        "page-view price"
+        "slider slider"
+        "billing billing"
+        "list button";
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .page-views {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-
+    grid-area: page-view;
     font-size: 13px;
     font-weight: 800;
     text-transform: uppercase;
     color: hsl(226, 100%, 87%);
     letter-spacing: 2px;
-    margin-left: 10%;
-    margin-bottom: 20px;
 }
 
 .price {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-
+    grid-area: price;
     font-weight: 800;
-    margin-right: 10%;
-    margin-bottom: 20px;
 }
 
 .range-slider {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
-
+    grid-area: slider;
     margin-bottom: 20px;
 }
 
@@ -165,10 +147,13 @@ body {
 }
 
 .billing {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+    grid-area: billing;
+    border-bottom: 1px solid rgba(230, 230, 230, 0.555);
+}
+
+.billing-text {
+    display: inline;
+    font-size: 14px;
 }
 
 /* Toggler */
@@ -226,11 +211,10 @@ input:checked+.toggle:before {
     transform: translateX(16px);
 }
 
-.start-trial {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
+.list-container {
+    grid-area: list;
 }
 
-.list-container {}
+.btn-box {
+    grid-area: button;
+}
