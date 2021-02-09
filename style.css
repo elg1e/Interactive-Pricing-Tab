@@ -94,11 +94,12 @@ body {
 .price {
     grid-area: price;
     font-weight: 800;
+    margin-right: 10%;
 }
 
 .range-slider {
     grid-area: slider;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 #myRange {
@@ -148,12 +149,25 @@ body {
 
 .billing {
     grid-area: billing;
-    border-bottom: 1px solid rgba(230, 230, 230, 0.555);
+    margin-bottom: 40px;
 }
 
 .billing-text {
     display: inline;
-    font-size: 14px;
+    font-size: 12px;
+    color: hsl(227, 35%, 25%);
+}
+
+.left-billing {
+    margin-left: 10%;
+}
+
+#discount {
+    color: hsl(15, 100%, 70%);
+    border-radius: 10px;
+    background-color: hsl(14, 92%, 95%);
+    padding: 1px 5px 1px 5px;
+    font-size: 10px;
 }
 
 /* Toggler */
@@ -163,6 +177,7 @@ body {
     display: inline-block;
     width: 40px;
     height: 20px;
+    margin: 0 10px 0 10px;
 }
 
 .switch input {
